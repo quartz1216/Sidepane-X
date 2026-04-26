@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "priority": 100,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        { "header": "X-Frame-Options", "operation": "remove" },
+        { "header": "x-frame-options", "operation": "remove" },
+        { "header": "Content-Security-Policy", "operation": "remove" },
+        { "header": "content-security-policy", "operation": "remove" },
+        { "header": "Cross-Origin-Opener-Policy", "operation": "remove" },
+        { "header": "cross-origin-opener-policy", "operation": "remove" },
+        { "header": "Cross-Origin-Embedder-Policy", "operation": "remove" },
+        { "header": "cross-origin-embedder-policy", "operation": "remove" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||x.com",
+      "resourceTypes": ["sub_frame", "main_frame", "xmlhttprequest"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 100,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        { "header": "X-Frame-Options", "operation": "remove" },
+        { "header": "x-frame-options", "operation": "remove" },
+        { "header": "Content-Security-Policy", "operation": "remove" },
+        { "header": "content-security-policy", "operation": "remove" },
+        { "header": "Cross-Origin-Opener-Policy", "operation": "remove" },
+        { "header": "cross-origin-opener-policy", "operation": "remove" },
+        { "header": "Cross-Origin-Embedder-Policy", "operation": "remove" },
+        { "header": "cross-origin-embedder-policy", "operation": "remove" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "||twitter.com",
+      "resourceTypes": ["sub_frame", "main_frame", "xmlhttprequest"]
+    }
+  }
+]
